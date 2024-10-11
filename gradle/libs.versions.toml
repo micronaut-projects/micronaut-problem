@@ -11,7 +11,7 @@ spock = "2.3-groovy-4.0"
 
 managed-zalando-problem="0.27.1"
 
-micronaut-logging = "1.3.0"
+micronaut-logging = "1.5.0"
 [libraries]
 # micronaut boms
 micronaut-logging = { module = "io.micronaut.logging:micronaut-logging-bom", version.ref = "micronaut-logging" }
