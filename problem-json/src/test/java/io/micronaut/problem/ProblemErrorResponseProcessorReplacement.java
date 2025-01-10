@@ -10,10 +10,10 @@ import jakarta.inject.Singleton;
 
 @Requires(property = "spec.name", value = "DataLeakageOverrideSpec")
 //tag::clazz[]
-@Replaces(ProblemErrorResponseProcessor.class)
+@Replaces(ProblemJsonErrorResponseBodyProvider.class)
 @Singleton
 public class ProblemErrorResponseProcessorReplacement
-        extends ProblemErrorResponseProcessor {
+        extends ProblemJsonErrorResponseBodyProvider {
     ProblemErrorResponseProcessorReplacement(ProblemConfiguration config) {
         super(config);
     }
