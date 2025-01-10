@@ -535,14 +535,14 @@ class TaskController {
 <p>The default Problem+JSON payload does not include the <code>detail</code> field to avoid accidental information disclosure if the exception root cause is not of type <code>UnsatisfiedRouteException</code> or <code>ThrowableProblem</code>.</p>
 </div>
 <div class="paragraph">
-<p>You can extend <a href="../api/io/micronaut/problem/ProblemErrorResponseProcessor.html">ProblemErrorResponseProcessor</a> to customize the behaviour:</p>
+<p>You can extend <a href="../api/io/micronaut/problem/ProblemJsonErrorResponseBodyProvider.html">ProblemJsonErrorResponseBodyProvider</a> to customize the behaviour:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Replaces(ProblemErrorResponseProcessor.class)
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Replaces(ProblemJsonErrorResponseBodyProvider.class)
 @Singleton
 public class ProblemErrorResponseProcessorReplacement
-        extends ProblemErrorResponseProcessor {
+        extends ProblemJsonErrorResponseBodyProvider {
     ProblemErrorResponseProcessorReplacement(ProblemConfiguration config) {
         super(config);
     }
